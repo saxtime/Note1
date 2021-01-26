@@ -46,9 +46,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -56,7 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            del(indexPath: indexPath)
+            deleteCategories(indexPath: indexPath)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -79,11 +76,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.tableView.reloadData()
             }
         }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Write an insrument"
             textField = alertTextField
         }
         alert.addAction(action)
+        alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
     }
     
@@ -93,11 +92,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
     }
     
-    func del(indexPath: IndexPath) {
+    func deleteCategories(indexPath: IndexPath) {
         if let i = array?[indexPath.row] {
             try! realm.write{
                 realm.delete(i)
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "secondVC", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationVC = segue.destination as! SecondViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.recievedString = array?[indexPath.row].name
+        }
+    }
+    
 }

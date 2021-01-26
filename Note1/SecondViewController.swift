@@ -14,11 +14,17 @@ class Type: Object {
 }
 
 class SecondViewController: UIViewController {
+    
+    let realm = try! Realm()
+    
+    var recievedString: String!
+        
+    @IBOutlet weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        label.text = recievedString
     }
     
 
