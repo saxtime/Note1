@@ -2,7 +2,7 @@
 name 'Note1' 
 
 in use:
-Table View
+Table View,
 Realm
 
 add it soon:
