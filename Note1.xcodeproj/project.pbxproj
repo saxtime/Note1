@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2DD53A08AA8CB0096082E7EE /* Pods_Note1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CE9BA1F4B19A3BA00648B9 /* Pods_Note1.framework */; };
+		5E47531625CE82F300BB2180 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E47531525CE82F300BB2180 /* GoogleService-Info.plist */; };
 		5E4DE62325C080E200663058 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DE62225C080E200663058 /* SecondViewController.swift */; };
+		5E6213FB25CD3498009D6A8D /* enterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6213FA25CD3498009D6A8D /* enterViewController.swift */; };
+		5E6213FF25CD34A8009D6A8D /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6213FE25CD34A8009D6A8D /* signUpViewController.swift */; };
+		5E62140225CD34B4009D6A8D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E62140125CD34B4009D6A8D /* loginViewController.swift */; };
 		5EF2E4CD25BF140800822DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E4CC25BF140800822DE5 /* AppDelegate.swift */; };
 		5EF2E4CF25BF140800822DE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E4CE25BF140800822DE5 /* SceneDelegate.swift */; };
 		5EF2E4D125BF140800822DE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E4D025BF140800822DE5 /* ViewController.swift */; };
@@ -19,7 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E47531525CE82F300BB2180 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E4DE62225C080E200663058 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5E6213FA25CD3498009D6A8D /* enterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enterViewController.swift; sourceTree = "<group>"; };
+		5E6213FE25CD34A8009D6A8D /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		5E62140125CD34B4009D6A8D /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		5EF2E4C925BF140800822DE5 /* Note1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF2E4CC25BF140800822DE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EF2E4CE25BF140800822DE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +63,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5E6213F825CD344C009D6A8D /* tableView Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5EF2E4D025BF140800822DE5 /* ViewController.swift */,
+				5E4DE62225C080E200663058 /* SecondViewController.swift */,
+			);
+			path = "tableView Controllers";
+			sourceTree = "<group>";
+		};
+		5E6213F925CD3475009D6A8D /* Auth View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E6213FA25CD3498009D6A8D /* enterViewController.swift */,
+				5E62140125CD34B4009D6A8D /* loginViewController.swift */,
+				5E6213FE25CD34A8009D6A8D /* signUpViewController.swift */,
+			);
+			name = "Auth View Controllers";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		5EF2E4C025BF140800822DE5 = {
 			isa = PBXGroup;
 			children = (
@@ -78,12 +106,13 @@
 			children = (
 				5EF2E4CC25BF140800822DE5 /* AppDelegate.swift */,
 				5EF2E4CE25BF140800822DE5 /* SceneDelegate.swift */,
-				5EF2E4D025BF140800822DE5 /* ViewController.swift */,
-				5E4DE62225C080E200663058 /* SecondViewController.swift */,
+				5E6213F825CD344C009D6A8D /* tableView Controllers */,
+				5E6213F925CD3475009D6A8D /* Auth View Controllers */,
 				5EF2E4D225BF140800822DE5 /* Main.storyboard */,
 				5EF2E4D825BF140900822DE5 /* Assets.xcassets */,
 				5EF2E4DA25BF140900822DE5 /* LaunchScreen.storyboard */,
 				5EF2E4DD25BF140900822DE5 /* Info.plist */,
+				5E47531525CE82F300BB2180 /* GoogleService-Info.plist */,
 				5EF2E4D525BF140800822DE5 /* Note1.xcdatamodeld */,
 			);
 			path = Note1;
@@ -157,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF2E4DC25BF140900822DE5 /* LaunchScreen.storyboard in Resources */,
+				5E47531625CE82F300BB2180 /* GoogleService-Info.plist in Resources */,
 				5EF2E4D925BF140900822DE5 /* Assets.xcassets in Resources */,
 				5EF2E4D425BF140800822DE5 /* Main.storyboard in Resources */,
 			);
@@ -211,8 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6213FF25CD34A8009D6A8D /* signUpViewController.swift in Sources */,
 				5EF2E4D125BF140800822DE5 /* ViewController.swift in Sources */,
+				5E6213FB25CD3498009D6A8D /* enterViewController.swift in Sources */,
 				5EF2E4D725BF140800822DE5 /* Note1.xcdatamodeld in Sources */,
+				5E62140225CD34B4009D6A8D /* loginViewController.swift in Sources */,
 				5EF2E4CD25BF140800822DE5 /* AppDelegate.swift in Sources */,
 				5E4DE62325C080E200663058 /* SecondViewController.swift in Sources */,
 				5EF2E4CF25BF140800822DE5 /* SceneDelegate.swift in Sources */,
