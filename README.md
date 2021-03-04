@@ -3,7 +3,7 @@ name 'Note1'
 
 in use:
 Table View,
-Realm
+Realm,
 
 Auth with email in Firebase
 
