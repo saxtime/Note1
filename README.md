@@ -7,7 +7,7 @@ Realm,
 
 Auth with email in Firebase
 
-add it soon:
-bugs
+soon:
+work with bugs
 
 
