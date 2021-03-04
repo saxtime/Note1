@@ -5,7 +5,9 @@ in use:
 Table View,
 Realm
 
+Auth with email in Firebase
+
 add it soon:
-Auth with Firebase
+bugs
 
 
